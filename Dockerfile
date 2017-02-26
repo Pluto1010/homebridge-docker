@@ -28,13 +28,13 @@ WORKDIR /homebridge
 
 EXPOSE 5353 51826
 
-COPY /package.json /homebridge/
+COPY assets/package.json /homebridge/
 RUN npm install -g
 
-COPY run.sh /
+COPY assets/run.sh /
 RUN chmod u+x /run.sh
 CMD ["/run.sh"]
 
 RUN mkdir /root/.homebridge
 VOLUME /root/.homebridge
-COPY config.json /root/.homebridge/
+COPY assets/config.json /root/.homebridge/
