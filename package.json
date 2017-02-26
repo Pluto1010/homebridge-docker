@@ -1,0 +1,18 @@
+{
+  "name": "homebridge-install",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "homebridge": "^0.4.16",
+    "homebridge-fritz": "^0.5.3",
+    "homebridge-harmonyhub": "^0.2.0",
+    "homebridge-statefuldummy": "^0.0.1",
+    "homebridge-mcu-lamp": "git+https://github.com/Pluto1010/homebridge-mcu-lamp.git#master"
+  }
+}
