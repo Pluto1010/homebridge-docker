@@ -25,15 +25,15 @@ VOLUME /var/run/dbus
 RUN mkdir /homebridge
 WORKDIR /homebridge
 
-EXPOSE 5353 51826
-
 COPY assets/package.json /homebridge/
 RUN npm install -g
 
 COPY assets/run.sh /
 RUN chmod u+x /run.sh
-CMD ["/run.sh"]
 
 RUN mkdir /root/.homebridge
 VOLUME /root/.homebridge
 COPY assets/config.json /root/.homebridge/
+
+EXPOSE 5224 5353 39577 45575 51826 61991
+CMD ["/run.sh"]
