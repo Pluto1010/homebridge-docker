@@ -5,7 +5,7 @@ sed -i "s/rlimit-nproc=3/#rlimit-nproc=3/" /etc/avahi/avahi-daemon.conf
 sed -i '/^use-ipv6=/s/=.*/=no/' /etc/avahi/avahi-daemon.conf
 sed -i '/^enable-dbus=/s/=.*/=no/' /etc/avahi/avahi-daemon.conf
 
-# dbus-daemon --system
+dbus-daemon --system
 avahi-daemon --no-drop-root -D
 
 homebridge -D
